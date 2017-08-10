@@ -22,6 +22,7 @@ cc_sources += navierstokes_2d_incompressible_homogeneous.cpp
 cc_sources += navierstokes_3d_incompbouss_homogeneous.cpp
 cc_sources += steadytaylorvortex.cpp
 cc_sources += steadytaylorvortex3d.cpp
+cc_sources += variabledens.cpp
 cc_sources += navierstokes_3d_transient_sutherland.cpp
 # do not edit this line! --l33t--
 

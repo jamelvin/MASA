@@ -2310,6 +2310,46 @@ public:
   Scalar eval_exact_rho(Scalar,Scalar,Scalar);
 };}
 
+// ------------------------------------------------------
+// --------------- variabledens 
+// ------------------------------------------------------
+namespace MASA{
+template <typename Scalar>
+class variabledens : public manufactured_solution<Scalar>
+{
+  using manufactured_solution<Scalar>::pi;
+  using manufactured_solution<Scalar>::PI;
+
+private:
+  Scalar gasConst_;
+  Scalar Pref_;
+  Scalar Tref_;
+  Scalar Cp_;
+  Scalar k;
+  Scalar u_0;
+  Scalar v_0;
+  Scalar w_0;
+  Scalar p_0;
+  Scalar a_;
+  Scalar ah_;
+  Scalar mu;
+  Scalar Mval_;
+
+public:
+  variabledens();
+  int init_var();
+  Scalar eval_q_u(Scalar,Scalar,Scalar);
+  Scalar eval_q_v(Scalar,Scalar,Scalar);
+  Scalar eval_q_w(Scalar,Scalar,Scalar);
+  Scalar eval_q_e(Scalar,Scalar,Scalar);  
+  Scalar eval_q_rho(Scalar,Scalar,Scalar);
+  Scalar eval_exact_u(Scalar,Scalar,Scalar);
+  Scalar eval_exact_v(Scalar,Scalar,Scalar);
+  Scalar eval_exact_w(Scalar,Scalar,Scalar);
+  Scalar eval_exact_p(Scalar,Scalar,Scalar);
+  Scalar eval_exact_rho(Scalar,Scalar,Scalar);
+  Scalar eval_exact_t(Scalar,Scalar,Scalar);
+};}
 
 // ------------------------------------------------------
 // --------------- navierstokes_3d_transient_sutherland 
